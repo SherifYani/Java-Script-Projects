@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #eee;
+}
+.container{
+    padding: 20px;
+    margin: 20px auto;
+}
+button{
+    width: fit-content;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    height: 30px;
+    color: white;
+    background-color: brown;
+    border: 2px solid skyblue;
+    border-radius: 20px;
+}
+div p {
+    color: gray;
+    margin: 20px 0px;
+    font-weight: 900;
+    font-size: 20px;
+}

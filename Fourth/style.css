@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #eee;
+}
+
+.container {
+    padding: 20px 15px;
+    margin: 20px auto;
+}
+.container div{
+    display: flex;
+    justify-content: center;
+}
+.container div:nth-child(1), .container div:nth-child(2){
+    font-size: 20px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+button {
+    width: 80px;
+    height: 30px;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px #333;
+    color: Black;
+    cursor: pointer;
+}
