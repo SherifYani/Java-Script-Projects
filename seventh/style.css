@@ -5,34 +5,32 @@
 }
 
 body {
-    background-color: #eee;
+    background-color: darkred;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.container {
-    padding: 0px 15px;
-    margin: 0px auto;
+.game-board {
+    background-color: darkblue;
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-rows: repeat(21, 1fr);
+    grid-template-columns: repeat(21, 1fr);
 }
 
-input {
-    margin-top: 20px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    border: none;
-    width: 300px;
-    height: 30px;
+.food {
+    background-color: orange;
+
 }
 
-form input[type="text"]:focus {
-    border: 1px solid rgb(123 211 244);
+.snake {
+    background-color: white;
 }
 
-button {
-    position: relative;
-    width: 70px;
-    padding: 5px 10px;
-    border-radius: 20px;
-    border: none;
-    right: 76px;
-    background-color: black;
-    color: white;
+.food , .snake {
+    border: 0.25vmin solid black;
 }

@@ -1,13 +1,37 @@
+let lastRenderTime = 0;
+let gameOver = false;
+import { snakeSpeed, update as updateSnake, render as renderSnake, getSnakeHead, getSnakeIntersection } from "./Snake.js";
+import { update as updateFood, render as renderFood } from "./food.js";
+import { outsideGrid } from "./grid.js";
+let gameBoard = document.getElementById('game-board');
+function Start(currentTime) {
 
-function Change() {
-    let d = document.getElementsByTagName('input')[0];
-    let x = document.getElementsByTagName('button')[0];
-    if (d.type === 'password') {
-        x.innerText = 'Hide';
-        d.type = 'text';
+    if (gameOver === true) {
+        return alert("You Lose ! ");
     }
-    else {
-        x.innerText = 'Show';
-        d.type = 'password';
+    window.requestAnimationFrame(Start);
+    const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
+    if (secondsSinceLastRender < 1 / snakeSpeed) return;
+    lastRenderTime = currentTime;
+
+    update();
+    render();
+}
+window.requestAnimationFrame(Start);
+
+function update() {
+    updateSnake();
+    updateFood();
+    if (!gameOver) {
+        checkDeath();
     }
+}
+function render() {
+    gameBoard.innerHTML = "";
+    renderSnake(gameBoard);
+    renderFood(gameBoard);
+}
+
+function checkDeath() {
+    gameOver = outsideGrid(getSnakeHead()) || getSnakeIntersection();
 }
