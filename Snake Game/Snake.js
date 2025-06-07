@@ -1,4 +1,4 @@
-export const snakeSpeed = 2;
+export const snakeSpeed = 5;
 export let newSegments = 0;
 import { getInputDirection } from "./input.js";
 
